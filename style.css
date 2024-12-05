@@ -1,0 +1,201 @@
+
+/* Basic layout */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+}
+.sidebar {
+    background-color: rgb(66, 71, 78);
+    color: rgb(255, 254, 253);
+    display: flex;
+    flex-direction: column;
+    width: 30%; 
+    height: 600px;
+    gap: 5px;
+    padding: 5px;
+}
+.user-welcome {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.user-avatar {
+    width: 40px;
+    height: 50px;
+    border-radius: 0%;
+    
+}
+.compose-button button {
+    background-color:gold;
+    color: white;
+    padding: 0px 90px;
+    height: 40px;
+    font-size: 120%;
+    border-radius: 5px;   
+}
+nav ul li {
+    margin-bottom: 10px;
+    padding-left: 0%;
+}
+ul {
+    list-style-type: none;  /* Removes bullets from the list */
+    padding-left: 0;        /* Removes default padding */
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center; /* Centers the search bar horizontally */
+    align-items: center; /* Centers the input vertically */
+    overflow: hidden; /* Ensures the input field fits within the rounded corners */
+    padding-top: 20px;
+}
+
+.search-bar input {
+    height: 50px; /* Adjust height of the input field */
+    padding: 10px; /* Adjust internal padding */
+    font-size: 13px; /* Optional: Adjust font size */
+    width: 90%; /* Full width of the container */
+    box-sizing: border-box; /* Includes padding and borders in the width/height */
+    border-radius: 15px; /* Ensure the input does not have its own border-radius */
+}
+
+.email-list {
+    background-color: rgb(204, 200, 200);
+    width: 50%;
+    padding: 10px;
+}
+
+.card01 {
+    display: flex;
+    flex-direction: column; /* Stacks the children (title and description) vertically */
+    padding: 10px;
+}
+
+.card01 .title {
+    display: flex;
+    justify-content: space-between; /* Keeps LinkedIn and 02:45 PM spaced out */
+}
+
+.title {
+    display: flex;
+    flex-direction: row;
+    margin: 0px;
+    padding: 0px;
+}
+
+.card02 {
+    display: flex;
+    flex-direction: column;
+    background-color: ghostwhite;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.card02 .title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.card03 {
+    display: flex;
+    flex-direction: column; /* Stacks the children (title and description) vertically */
+    padding: 10px;
+}
+
+.card03 .title {
+    display: flex;
+    justify-content: space-between; /* Keeps LinkedIn and 02:45 PM spaced out */
+}
+
+.email-content {
+    width: 50%;
+}
+
+.email-body {
+    margin-bottom: 20px; /* Adds space between email content and the reply section */
+    /* width: 600px; */
+}
+
+.reply-section {
+    padding: 10px;
+    margin-left: -5px;
+    /* width: 50%;*/
+}
+
+.reply-section textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.reply-section textarea placeholder {
+    color: gray; /* Changes placeholder text color to gray */
+    font-style: italic; /* Optional: makes the placeholder text italic */
+}
+
+.reply-section button {
+    margin-top: 10px; /* Adds space above the button */
+    padding: 10px 20px;
+    background-color: darkgray;
+    color: white;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+.reply-section button:hover {
+    background-color: gold; /* Darker color on hover */
+}
+
+
+/* For screens smaller than 769px (e.g., mobile devices) */
+@media screen and (max-width: 769px) {
+    body {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+
+    .email-list {
+        width: 100%;
+    }
+
+    .user-welcome {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+    }
+
+    .search-bar input {
+        width: 100%;
+    }
+
+    .compose-button button {
+        align-items: center;
+        color: white;
+        background-color: gold;
+        padding: 0px 20px;
+        font-size: 100%;
+        width: 100%;
+    }
+
+    .reply-section button:hover {
+        color: white;
+        background-color: gold;
+    }
+    
+    .email-content {
+        width: 100%;
+    }
+
+    .reply-section button {
+        width: 100%;
+    }
+}
